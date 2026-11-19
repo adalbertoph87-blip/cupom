@@ -2563,12 +2563,16 @@ function bindMulticaixa() {
 }
 
 // --- VSL / Video Page ---
-const VSL_CTA_DELAY_MS = (5 * 60 + 20) * 1000; // 05:20 (320 segundos)
+const VSL_CTA_DELAY_SECONDS = 5 * 60 + 20; // 05:20 (320 segundos)
+const VSL_CTA_DELAY_MS = VSL_CTA_DELAY_SECONDS * 1000;
 let vslCtaTimeoutId = null;
 let vslCtaIntervalId = null;
 let vslCtaVisibilityHandler = null;
+let vslCtaMessageHandler = null;
+let vslCtaIframeEl = null;
+let vslCtaIframeTimeHandler = null;
 
-function clearVslCtaTimer() {
+function clearVslCtaFallbackTimer() {
   if (vslCtaTimeoutId !== null) {
     clearTimeout(vslCtaTimeoutId);
     vslCtaTimeoutId = null;
@@ -2583,6 +2587,19 @@ function clearVslCtaTimer() {
   }
 }
 
+function clearVslCtaTimer() {
+  clearVslCtaFallbackTimer();
+  if (vslCtaMessageHandler) {
+    window.removeEventListener('message', vslCtaMessageHandler);
+    vslCtaMessageHandler = null;
+  }
+  if (vslCtaIframeEl && vslCtaIframeTimeHandler) {
+    vslCtaIframeEl.removeEventListener('video:timeupdate', vslCtaIframeTimeHandler);
+    vslCtaIframeEl = null;
+    vslCtaIframeTimeHandler = null;
+  }
+}
+
 function renderVsl() {
   const amount = store.lastWithdrawal || store.balance || TOTAL_VALUE;
   return `
@@ -2593,9 +2610,9 @@ function renderVsl() {
         Assista o vídeo informativo até o final para processar seu saque com segurança imediata
       </p>
       <div class="vsl-video-wrap">
-        <div id="ifr_6afcb0e441433dbce3ceb26a_wrapper" style="margin: 0 auto; width: 100%; max-width: 400px;">
-          <div style="position: relative; padding: 178.21782178217822% 0 0 0;" id="ifr_6afcb0e441433dbce3ceb26a_aspect">
-            <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_6afcb0e441433dbce3ceb26a" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin" onload=" this.onload=null, this.src='https://scripts.converteai.net/c0486b1f-6b02-4e9c-8985-db000a45e1f8/players/6afcb0e441433dbce3ceb26a/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe>
+        <div id="ifr_6aff74da85b58d2bdebdbc63_wrapper" style="margin: 0 auto; width: 100%; max-width: 400px;">
+          <div style="position: relative; padding: 178.21782178217822% 0 0 0;" id="ifr_6aff74da85b58d2bdebdbc63_aspect">
+            <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_6aff74da85b58d2bdebdbc63" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin" onload=" this.onload=null, this.src='https://scripts.converteai.net/6d58978f-8af7-41f2-bb7b-7e72f9865f1d/players/6aff74da85b58d2bdebdbc63/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe>
           </div>
         </div>
       </div>
@@ -2632,14 +2649,14 @@ function bindVsl() {
 
   const startedAt = Date.now();
   let revealed = false;
+  let videoSyncActive = false;
 
-  function checkAndRevealCta() {
+  function revealCta() {
     if (revealed) return;
     if (currentRoute !== '/vsl') {
       clearVslCtaTimer();
       return;
     }
-    if (Date.now() - startedAt < VSL_CTA_DELAY_MS) return;
 
     const ctaWrap = document.getElementById('vsl-release-cta');
     if (!ctaWrap) {
@@ -2652,12 +2669,64 @@ function bindVsl() {
     ctaWrap.hidden = false;
     ctaWrap.classList.remove('vsl-release-wrap--hidden');
     ctaWrap.setAttribute('aria-hidden', 'false');
+
+    try {
+      ctaWrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } catch (_) {
+      // Ignore scrollIntoView errors on older browsers
+    }
   }
 
-  vslCtaTimeoutId = setTimeout(checkAndRevealCta, VSL_CTA_DELAY_MS);
-  vslCtaIntervalId = setInterval(checkAndRevealCta, 1000);
+  function handleVideoTimeSeconds(seconds) {
+    if (revealed) return;
+    if (typeof seconds !== 'number' || !Number.isFinite(seconds)) return;
+
+    if (!videoSyncActive) {
+      videoSyncActive = true;
+      clearVslCtaFallbackTimer();
+    }
+
+    if (seconds >= VSL_CTA_DELAY_SECONDS) {
+      revealCta();
+    }
+  }
+
+  // Sincronização direta com o tempo real do vídeo ConverteAI / VTurb v4
+  vslCtaMessageHandler = (event) => {
+    const data = event && event.data;
+    if (!data || typeof data !== 'object') return;
+    if (data.mime === 'smartplayer/message-text-v4' && data.type === 'videoTimeUpdate') {
+      handleVideoTimeSeconds(Number(data.time));
+    }
+  };
+  window.addEventListener('message', vslCtaMessageHandler);
+
+  const iframeEl = document.getElementById('ifr_6aff74da85b58d2bdebdbc63');
+  if (iframeEl) {
+    vslCtaIframeEl = iframeEl;
+    vslCtaIframeTimeHandler = (event) => {
+      const time = event && event.detail && event.detail.time;
+      handleVideoTimeSeconds(Number(time));
+    };
+    iframeEl.addEventListener('video:timeupdate', vslCtaIframeTimeHandler);
+  }
+
+  // Fallback rigoroso de 05:20 caso o player não envie eventos de tempo
+  function checkFallbackElapsed() {
+    if (revealed || videoSyncActive) return;
+    if (currentRoute !== '/vsl') {
+      clearVslCtaTimer();
+      return;
+    }
+    if (Date.now() - startedAt >= VSL_CTA_DELAY_MS) {
+      revealCta();
+    }
+  }
+
+  vslCtaTimeoutId = setTimeout(checkFallbackElapsed, VSL_CTA_DELAY_MS);
+  vslCtaIntervalId = setInterval(checkFallbackElapsed, 1000);
   vslCtaVisibilityHandler = () => {
-    if (!document.hidden) checkAndRevealCta();
+    if (!document.hidden) checkFallbackElapsed();
   };
   document.addEventListener('visibilitychange', vslCtaVisibilityHandler);
 }
