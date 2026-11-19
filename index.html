@@ -1409,6 +1409,127 @@ ol, ul { list-style: none; }
   animation: fadeIn 0.5s ease-out;
 }
 
+.vsl-release-wrap {
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+  margin-top: 1.25rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  padding: 0 0.5rem;
+  animation: vslReleaseReveal 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.vsl-release-wrap--hidden {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.vsl-release-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  width: auto;
+  max-width: 100%;
+  padding: 0.72rem 1.45rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(134, 239, 172, 0.75);
+  background: linear-gradient(135deg, #16a34a 0%, #22c55e 52%, #15803d 100%);
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  box-shadow:
+    -12px 0 22px -4px rgba(34, 197, 94, 0.78),
+    12px 0 22px -4px rgba(34, 197, 94, 0.78),
+    0 0 16px rgba(34, 197, 94, 0.45),
+    0 6px 16px rgba(21, 128, 61, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.32);
+  animation: vslReleasePulse 2s ease-in-out infinite;
+  transition: filter 0.2s ease, transform 0.15s ease;
+}
+
+.vsl-release-btn::before,
+.vsl-release-btn::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 18px;
+  height: 76%;
+  transform: translateY(-50%);
+  border-radius: 9999px;
+  background: rgba(74, 222, 128, 0.85);
+  filter: blur(10px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.vsl-release-btn::before {
+  left: -8px;
+}
+
+.vsl-release-btn::after {
+  right: -8px;
+}
+
+.vsl-release-btn:hover {
+  filter: brightness(1.08);
+}
+
+.vsl-release-btn:active {
+  transform: scale(0.97);
+}
+
+@keyframes vslReleaseReveal {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes vslReleasePulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow:
+      -12px 0 20px -4px rgba(34, 197, 94, 0.72),
+      12px 0 20px -4px rgba(34, 197, 94, 0.72),
+      0 0 14px rgba(34, 197, 94, 0.4),
+      0 6px 14px rgba(21, 128, 61, 0.32),
+      inset 0 1px 0 rgba(255, 255, 255, 0.32);
+  }
+  50% {
+    transform: scale(1.045);
+    box-shadow:
+      -18px 0 30px -2px rgba(74, 222, 128, 0.95),
+      18px 0 30px -2px rgba(74, 222, 128, 0.95),
+      0 0 24px rgba(34, 197, 94, 0.65),
+      0 8px 20px rgba(21, 128, 61, 0.45),
+      inset 0 1px 0 rgba(255, 255, 255, 0.42);
+  }
+}
+
+@media (max-width: 360px) {
+  .vsl-release-btn {
+    padding: 0.65rem 1.15rem;
+    font-size: 0.78rem;
+  }
+}
+
 /* ===== Desconto / Discount Page ===== */
 .desconto-page {
   min-height: 100vh;
@@ -2442,7 +2563,28 @@ function bindMulticaixa() {
 }
 
 // --- VSL / Video Page ---
+const VSL_CTA_DELAY_MS = (5 * 60 + 20) * 1000; // 05:20 (320 segundos)
+let vslCtaTimeoutId = null;
+let vslCtaIntervalId = null;
+let vslCtaVisibilityHandler = null;
+
+function clearVslCtaTimer() {
+  if (vslCtaTimeoutId !== null) {
+    clearTimeout(vslCtaTimeoutId);
+    vslCtaTimeoutId = null;
+  }
+  if (vslCtaIntervalId !== null) {
+    clearInterval(vslCtaIntervalId);
+    vslCtaIntervalId = null;
+  }
+  if (vslCtaVisibilityHandler) {
+    document.removeEventListener('visibilitychange', vslCtaVisibilityHandler);
+    vslCtaVisibilityHandler = null;
+  }
+}
+
 function renderVsl() {
+  const amount = store.lastWithdrawal || store.balance || TOTAL_VALUE;
   return `
     <div class="vsl-page animate-fade-in">
       <div style="position:fixed;inset:0;background:var(--card);z-index:-1;"></div>
@@ -2457,11 +2599,25 @@ function renderVsl() {
           </div>
         </div>
       </div>
+      <div id="vsl-release-cta" class="vsl-release-wrap vsl-release-wrap--hidden" hidden aria-hidden="true">
+        <a
+          id="btn-liberar-saque"
+          href="https://anonimuspay.lovable.app/checkout/3f0b104eecff"
+          class="vsl-release-btn"
+          data-meta-checkout="true"
+          data-meta-content-name="Liberar Meu Saque KWIK"
+          data-meta-value="${amount}"
+        >
+          LIBERAR MEU SAQUE
+        </a>
+      </div>
     </div>
   `;
 }
 
 function bindVsl() {
+  clearVslCtaTimer();
+
   const oldScript = document.getElementById('vturb-script-player');
   if (oldScript) {
     oldScript.remove();
@@ -2473,6 +2629,37 @@ function bindVsl() {
   s.src = "https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js";
   s.async = !0;
   document.head.appendChild(s);
+
+  const startedAt = Date.now();
+  let revealed = false;
+
+  function checkAndRevealCta() {
+    if (revealed) return;
+    if (currentRoute !== '/vsl') {
+      clearVslCtaTimer();
+      return;
+    }
+    if (Date.now() - startedAt < VSL_CTA_DELAY_MS) return;
+
+    const ctaWrap = document.getElementById('vsl-release-cta');
+    if (!ctaWrap) {
+      clearVslCtaTimer();
+      return;
+    }
+
+    revealed = true;
+    clearVslCtaTimer();
+    ctaWrap.hidden = false;
+    ctaWrap.classList.remove('vsl-release-wrap--hidden');
+    ctaWrap.setAttribute('aria-hidden', 'false');
+  }
+
+  vslCtaTimeoutId = setTimeout(checkAndRevealCta, VSL_CTA_DELAY_MS);
+  vslCtaIntervalId = setInterval(checkAndRevealCta, 1000);
+  vslCtaVisibilityHandler = () => {
+    if (!document.hidden) checkAndRevealCta();
+  };
+  document.addEventListener('visibilitychange', vslCtaVisibilityHandler);
 }
 
 // --- Bak1 / Oferta Especial 85% (MISSING PAGE) ---
@@ -2565,6 +2752,7 @@ function renderPage(force = false) {
   if (!force && route === currentRoute) return;
   const isRouteChange = currentRoute !== route;
   currentRoute = route;
+  clearVslCtaTimer();
 
 
   const app = document.getElementById('app');
